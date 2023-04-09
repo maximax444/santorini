@@ -22,8 +22,8 @@ const swiper = new Swiper('.home-cat .swiper', {
         },
         // when window width is >= 640px
         992: {
-            slidesPerView: 2,
-            spaceBetween: 14
+            slidesPerView: 3,
+            spaceBetween: 15
         },
         // when window width is >= 640px
         1200: {
