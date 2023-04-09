@@ -11,56 +11,266 @@
     <link rel="preload" href="fonts/MyriadPro-Semibold.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/DINNeuzeitGroteskLT-BoldCond.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
 </head>
 
 <body>
     <header class="header">
-        <a href="" class="header__logo"></a>
+        <a href="" class="header__logo">
+            <img src="img/logo.svg" alt="">
+        </a>
         <div class="header__right">
             <ul class="header__menu">
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Portfolio</a></li>
+                <li><a href="">Catalog</a></li>
+                <li><a href="">Reviews</a></li>
             </ul>
-            <div class="header__contact"><a href="" class="header__mail"></a><a href="" class="header__wa"></a><a
-                    href="" class="header__phone"></a></div>
+            <div class="header__contact">
+                <a href="" class="header__mail">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_9_2395)">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12 0C18.6274 0 24 5.37258 24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12C0 5.37258 5.37258 0 12 0ZM19.6172 16.6519V7.73334L15.1576 12.1926L19.6172 16.6519ZM5.3355 16.8336H18.6648L14.591 12.7598L13.0383 14.3122C12.963 14.3873 12.8611 14.4294 12.7547 14.4294H11.2454C11.1927 14.4294 11.1405 14.4191 11.0919 14.399C11.0432 14.3789 10.999 14.3494 10.9617 14.3122L9.40912 12.7598L5.33531 16.8336H5.3355ZM4.38281 7.73306V16.6522L8.84236 12.1926L4.38281 7.73306ZM19.0503 7.16639H4.95L11.4114 13.6278H12.5888L19.0503 7.16639Z"
+                                fill="#3EA4A6" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_9_2395">
+                                <rect width="24" height="24" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </a>
+                <a href="" class="header__wa">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_9_2391)">
+                            <path
+                                d="M12.003 0H11.997C5.3805 0 0 5.382 0 12C0 14.625 0.846 17.058 2.2845 19.0335L0.789 23.4915L5.4015 22.017C7.299 23.274 9.5625 24 12.003 24C18.6195 24 24 18.6165 24 12C24 5.3835 18.6195 0 12.003 0ZM18.9855 16.9455C18.696 17.763 17.547 18.441 16.6305 18.639C16.0035 18.7725 15.1845 18.879 12.4275 17.736C8.901 16.275 6.63 12.6915 6.453 12.459C6.2835 12.2265 5.028 10.5615 5.028 8.8395C5.028 7.1175 5.9025 6.279 6.255 5.919C6.5445 5.6235 7.023 5.4885 7.482 5.4885C7.6305 5.4885 7.764 5.496 7.884 5.502C8.2365 5.517 8.4135 5.538 8.646 6.0945C8.9355 6.792 9.6405 8.514 9.7245 8.691C9.81 8.868 9.8955 9.108 9.7755 9.3405C9.663 9.5805 9.564 9.687 9.387 9.891C9.21 10.095 9.042 10.251 8.865 10.47C8.703 10.6605 8.52 10.8645 8.724 11.217C8.928 11.562 9.633 12.7125 10.671 13.6365C12.0105 14.829 13.0965 15.21 13.485 15.372C13.7745 15.492 14.1195 15.4635 14.331 15.2385C14.5995 14.949 14.931 14.469 15.2685 13.9965C15.5085 13.6575 15.8115 13.6155 16.1295 13.7355C16.4535 13.848 18.168 14.6955 18.5205 14.871C18.873 15.048 19.1055 15.132 19.191 15.2805C19.275 15.429 19.275 16.1265 18.9855 16.9455Z"
+                                fill="#3EA4A6" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_9_2391">
+                                <rect width="24" height="24" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </a>
+                <a href="" class="header__phone">+30 21 1199 2011</a>
+            </div>
         </div>
     </header>
+    <section class="home-cat">
+        <div class="container">
+            <h2 class="home-cat__title">Catalog</h2>
+            <p class="home-cat__descr">Our SantoriniDress team in Italy lives in North Tuscany, so can reach you
+                anywhere in the area around (including Pisa, Florence, Siena, Versilia, or Cinque Terre). They are also
+                available in any other part of Italy upon request</p>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <a href="" class="home-cat__block swiper-slide">
+                        <span class="home-cat__img">
+                            <img src="img/home/cat1.png" alt="">
+                        </span>
+                        <span class="home-cat__name">White and blue ombre dress</span>
+                        <span class="home-cat__text">SIZE: one size (EU 32-44, US 0-14)</span>
+                        <span class="home-cat__bot">
+                            <span class="home-cat__price">€150.00</span>
+                            <span class="home-cat__btn">Request</span>
+                        </span>
+                    </a>
+                    <a href="" class="home-cat__block swiper-slide">
+                        <span class="home-cat__img">
+                            <img src="img/home/cat2.png" alt="">
+                        </span>
+                        <span class="home-cat__name">Neon green dress</span>
+                        <span class="home-cat__text">SIZE: transformer, one size (EU 32-44, US 0-14) or (EU 36-48, US
+                            4-18)</span>
+                        <span class="home-cat__bot">
+                            <span class="home-cat__price">€100.00</span>
+                            <span class="home-cat__btn">Request</span>
+                        </span>
+                    </a>
+                    <a href="" class="home-cat__block swiper-slide">
+                        <span class="home-cat__img">
+                            <img src="img/home/cat3.png" alt="">
+                        </span>
+                        <span class="home-cat__name">Burgundy and black ombre glitter dress</span>
+                        <span class="home-cat__text">SIZE: one size (EU 32-44, US 0-14)</span>
+                        <span class="home-cat__bot">
+                            <span class="home-cat__price">€250.00</span>
+                            <span class="home-cat__btn">Request</span>
+                        </span>
+                    </a>
+                    <a href="" class="home-cat__block swiper-slide">
+                        <span class="home-cat__img">
+                            <img src="img/home/cat4.png" alt="">
+                        </span>
+                        <span class="home-cat__name">Blue and silver ombre glitter dress</span>
+                        <span class="home-cat__text">SIZE: one size (EU 32-44, US 0-14)</span>
+                        <span class="home-cat__bot">
+                            <span class="home-cat__price">€250.00</span>
+                            <span class="home-cat__btn">Request</span>
+                        </span>
+                    </a>
+                    <a href="" class="home-cat__block swiper-slide">
+                        <span class="home-cat__img">
+                            <img src="img/home/cat5.png" alt="">
+                        </span>
+                        <span class="home-cat__name">Red glitter dress</span>
+                        <span class="home-cat__text">SIZE: one size (EU 32-44, US 0-14)</span>
+                        <span class="home-cat__bot">
+                            <span class="home-cat__price">€250.00</span>
+                            <span class="home-cat__btn">Request</span>
+                        </span>
+                    </a>
+                    <a href="" class="home-cat__block swiper-slide">
+                        <span class="home-cat__img">
+                            <img src="img/home/cat6.png" alt="">
+                        </span>
+                        <span class="home-cat__name">Cinderella style turquoise dress</span>
+                        <span class="home-cat__text">SIZE: one size</span>
+                        <span class="home-cat__bot">
+                            <span class="home-cat__price">€150.00</span>
+                            <span class="home-cat__btn">Request</span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <div class="home-cat__arrows">
+                <div class="left home-cat__prev">
+                    <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 9.396L5.35332 10L-5.16561e-07 5L5.35332 8.9714e-07L6 0.603999L1.29372 5L6 9.396Z"
+                            fill="black" />
+                    </svg>
+                </div>
+                <div class="right home-cat__next">
+                    <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0.603998L0.646679 0L6 5L0.646679 10L0 9.396L4.70628 5L0 0.603998Z" fill="#000" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="home-about">
         <div class="container">
             <h2 class="home-about__title">santorinidress</h2>
             <div class="home-about__main">
-                <div class="home-about__text"></div>
-                <div class="home-about__img"></div>
+                <div class="home-about__text">
+                    <b>We make your dream of a photo shoot in a flowy dress come true</b>
+                    <p>Just imagine yourself in a chic outfit with a long airy train, which gracefully soars in the air,
+                        rising under the light breeze. Every girl will feel like a princess at such moments. Our
+                        professional masters are ready to capture your exquisite beauty against the backdrop of amazing
+                        natural landscapes.
+
+                    </p>
+                    <p>A flying dress photo shoot can take place at various locations in Santorini, Italy, Dubai, or
+                        Mexico. Our catalog contains both the most popular tourist places and little-known attractive
+                        corners for getting emotional, romantic shots. We offer a vast selection (more than 60 models)
+                        of dresses in different shades for any type of figure. Our competent consultants will help you
+                        choose breathtaking shooting locations and create a charming image using professional makeup and
+                        accessories. You can perfectly pose among urban landscapes, on the sea coast, or on vast sandy
+                        desert expanses to get extraordinary photography.</p>
+                </div>
+                <div class="home-about__img">
+                    <img src="img/home/about1.png" alt="">
+                </div>
             </div>
             <div class="home-about__wrap">
-                <div class="home-about__col"></div>
-                <div class="home-about__col"></div>
-                <div class="home-about__col"></div>
+                <div class="home-about__col">
+                    <span>FLOWING DRESS PHOTOSHOOT THAT WILL MAKE YOU FEEL LIKE A REAL QUEEN</span>
+                </div>
+                <div class="home-about__col">
+                    <b>We have all the necessary services and the best photographers for chic shooting</b>
+                    <p>Private photographers working in Santorini have considerable experience and many creative ideas.
+                        They will select the most successful angles and tell you how to pose correctly in the frame. You
+                        can safely trust professionals in their field who know how to shoot masterfully at any time of
+                        the day. They will harmoniously emphasize your charm against the background of the chosen
+                        location</p>
+                </div>
+                <div class="home-about__col">
+                    <b>By contacting Santorini Dress, you will receive the following</b>
+                    <ul>
+                        <li>a lot of positive emotions and stunning, guaranteed high-quality images</li>
+                        <li>the opportunity to participate in professional portrait and group photo shoots (with
+                            friends, loved ones, or with the whole family)</li>
+                    </ul>
+                </div>
             </div>
             <div class="home-about__gal">
-                <div class="home-about__gal-photo"></div>
+                <div class="home-about__gal-photo">
+                    <img src="img/home/about2.png" alt="">
+                </div>
                 <div class="home-about__gal-right">
-                    <div class="home-about__gal-prev"></div>
-                    <p class="home-about__gal-text"></p>
+                    <div class="home-about__gal-prev">
+                        <img src="img/home/about3.png" alt="">
+                    </div>
+                    <p class="home-about__gal-text">The Santorini Dress team will provide you with beautiful outfits to
+                        create a charming romantic look and organize shooting at a high professional level. So we are
+                        sure you will be satisfied</p>
                 </div>
             </div>
         </div>
     </section>
     <footer class="footer">
         <div class="footer__top">
-            <a href="" class="footer__logo"></a>
-            <ul class="footer__menu"></ul>
-            <div class="footer__contact"><a href="" class="footer__mail"></a><a href="" class="footer__wa"></a><a
-                    href="" class="footer__phone"></a></div>
+            <a href="" class="footer__logo">
+                <img src="img/logo.svg" alt="">
+            </a>
+            <ul class="footer__menu">
+                <li><a href="">About Us</a></li>
+                <li><a href="">Portfolio</a></li>
+                <li><a href="">Catalog</a></li>
+                <li><a href="">Reviews</a></li>
+            </ul>
+            <div class="footer__contact">
+                <a href="" class="footer__mail">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_9_2395)">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12 0C18.6274 0 24 5.37258 24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12C0 5.37258 5.37258 0 12 0ZM19.6172 16.6519V7.73334L15.1576 12.1926L19.6172 16.6519ZM5.3355 16.8336H18.6648L14.591 12.7598L13.0383 14.3122C12.963 14.3873 12.8611 14.4294 12.7547 14.4294H11.2454C11.1927 14.4294 11.1405 14.4191 11.0919 14.399C11.0432 14.3789 10.999 14.3494 10.9617 14.3122L9.40912 12.7598L5.33531 16.8336H5.3355ZM4.38281 7.73306V16.6522L8.84236 12.1926L4.38281 7.73306ZM19.0503 7.16639H4.95L11.4114 13.6278H12.5888L19.0503 7.16639Z"
+                                fill="#3EA4A6" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_9_2395">
+                                <rect width="24" height="24" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </a>
+                <a href="" class="footer__wa">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_9_2391)">
+                            <path
+                                d="M12.003 0H11.997C5.3805 0 0 5.382 0 12C0 14.625 0.846 17.058 2.2845 19.0335L0.789 23.4915L5.4015 22.017C7.299 23.274 9.5625 24 12.003 24C18.6195 24 24 18.6165 24 12C24 5.3835 18.6195 0 12.003 0ZM18.9855 16.9455C18.696 17.763 17.547 18.441 16.6305 18.639C16.0035 18.7725 15.1845 18.879 12.4275 17.736C8.901 16.275 6.63 12.6915 6.453 12.459C6.2835 12.2265 5.028 10.5615 5.028 8.8395C5.028 7.1175 5.9025 6.279 6.255 5.919C6.5445 5.6235 7.023 5.4885 7.482 5.4885C7.6305 5.4885 7.764 5.496 7.884 5.502C8.2365 5.517 8.4135 5.538 8.646 6.0945C8.9355 6.792 9.6405 8.514 9.7245 8.691C9.81 8.868 9.8955 9.108 9.7755 9.3405C9.663 9.5805 9.564 9.687 9.387 9.891C9.21 10.095 9.042 10.251 8.865 10.47C8.703 10.6605 8.52 10.8645 8.724 11.217C8.928 11.562 9.633 12.7125 10.671 13.6365C12.0105 14.829 13.0965 15.21 13.485 15.372C13.7745 15.492 14.1195 15.4635 14.331 15.2385C14.5995 14.949 14.931 14.469 15.2685 13.9965C15.5085 13.6575 15.8115 13.6155 16.1295 13.7355C16.4535 13.848 18.168 14.6955 18.5205 14.871C18.873 15.048 19.1055 15.132 19.191 15.2805C19.275 15.429 19.275 16.1265 18.9855 16.9455Z"
+                                fill="#3EA4A6" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_9_2391">
+                                <rect width="24" height="24" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </a><a href="" class="footer__phone">+30 21 1199 2011</a>
+            </div>
         </div>
         <div class="footer__bottom">
-            <div class="footer__links"><a href=""></a><a href=""></a></div>
-            <div class="footer__copy"></div>
-            <a href="" class="footer__btn"></a>
+            <div class="footer__links"><a href="">Privacy Policy</a><a href="">Terms & Conditions</a></div>
+            <div class="footer__copy">Santorini Dress © 2016 – 2023</div>
+            <div class="footer__btn-wrap">
+                <a href="" class="footer__btn">Request</a>
+            </div>
+
         </div>
     </footer>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="js/jquery.scrollme.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"
+        integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
