@@ -27,18 +27,18 @@ def parsScss(lines):
 		containsMedia = i.find('media')
 		if containsMedia != -1:
 			typeOfMedia = re.search("\s\d*?px", i).group(0)[1:-2]
-			if (int(typeOfMedia) == 768):
+			if (int(typeOfMedia) == 767):
 				typeOfDevice = 1
-			elif (int(typeOfMedia) == 992):
+			elif (int(typeOfMedia) == 991):
 				typeOfDevice = 2
 			else:
 				typeOfDevice = 3
 			output += i + '\n'
 			continue
 		if (typeOfDevice == 0):
-			output += parce(i, 320) + '\n'
+			output += parce(i, 375) + '\n'
 		elif (typeOfDevice == 1):
-			output += parce(i, 1050) + '\n'
+			output += parce(i, 768) + '\n'
 		elif (typeOfDevice == 2):
 			output += i + '\n'
 		else:
