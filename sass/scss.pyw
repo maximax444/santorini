@@ -4,7 +4,7 @@ import glob
 def parce(line, width):
 	containsPx = line.find('px')
 	if containsPx != -1:
-		patternString = "\s\d*?px"
+		patternString = r"\b\d*?px"
 		matchString = re.findall(patternString, line)
 		for j in matchString:
 			matchString2 = re.search(patternString, line)
@@ -14,7 +14,7 @@ def parce(line, width):
 			# print(float(matchString2.group(0)[1:-2]))
 			# print(float(matchString2.group(0)[1:-2])/width)
 			# print(str(((float(matchString2.group(0)[1:-2]))/width)*100))
-			line = line.replace(matchString2.group(0), ' ' + str(((float(matchString2.group(0)[1:-2]))/width)*100) + 'vw', 1)
+			line = line.replace(matchString2.group(0), '' + str(((float(matchString2.group(0)[0:-2]))/width)*100) + 'vw', 1)
 	return line
 def parsScss(lines):
 	# 0 - mob
@@ -35,9 +35,9 @@ def parsScss(lines):
 				typeOfDevice = 3
 			output += i + '\n'
 			continue
-		if (typeOfDevice == 0):
+		if (typeOfDevice == 1):
 			output += parce(i, 375) + '\n'
-		elif (typeOfDevice == 1):
+		elif (typeOfDevice == 2):
 			output += parce(i, 768) + '\n'
 		elif (typeOfDevice == 2):
 			output += i + '\n'
