@@ -22,6 +22,7 @@ const swiper = new Swiper('.home-cat .swiper', {
         768: {
             slidesPerView: 2,
             slidesPerGroup: 2,
+            effect: 0,
             spaceBetween: 14
         },
         // when window width is >= 640px
@@ -31,6 +32,54 @@ const swiper = new Swiper('.home-cat .swiper', {
             effect: 0,
             spaceBetween: 15
         }
+    }
+});
+const swiper2 = new Swiper('.home-rev__wrap > .swiper', {
+
+    slidesPerView: 2,
+    spaceBetween: 16,
+    loop: false,
+    slidesPerGroup: 2,
+    effect: "coverflow",
+    // Navigation arrows
+    navigation: {
+        nextEl: '.home-rev__next',
+        prevEl: '.home-rev__prev',
+    },
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+            effect: "coverflow",
+            spaceBetween: 20
+        },
+        // when window width is >= 480px
+        768: {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+            effect: 0,
+            spaceBetween: 14
+        },
+        // when window width is >= 640px
+        992: {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+            effect: 0,
+            spaceBetween: 16
+        }
+    }
+});
+const swiper3 = new Swiper('.home-rev__cont > .swiper', {
+
+    slidesPerView: 1,
+    spaceBetween: 16,
+    loop: false,
+    effect: "coverflow",
+    // Navigation arrows
+    navigation: {
+        nextEl: '.home-rev__next',
+        prevEl: '.home-rev__prev',
     }
 });
 $('.header__burg').on('click', function (e) {
