@@ -1,4 +1,313 @@
+.main
+    display: flex
+    justify-content: space-between
+    &__slider
+        width: calc((100% + 60px) * 2 /3)
+        height: 650px
+        img
+            height: 650px
+            width: 100%
+            object-fit: cover
+    &__cont
+        width: calc((100% + 60px) * 1 /3 )
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+    &__info
+        padding: 48px 60px
+        padding-left: 79px
+    &__title
+        font-family: 'DINNeuzeitGrotesk LT BoldCond'
+        font-style: normal
+        font-weight: 700
+        font-size: 54px
+        line-height: 60px
+        text-transform: uppercase
+        color: #000000
+        margin-top: 0
+        margin-bottom: 29px
+        animation-delay: 300ms
+    &__descr
+        margin: 0
+        font-weight: 300
+        font-size: 14px
+        line-height: 22px
+        max-width: 320px
+        margin-bottom: 27px
+        animation-delay: 500ms
+    &__btn
+        width: 208px
+        height: 48px
+        display: flex
+        align-items: center
+        justify-content: center
+        background: #E84A43
+        font-weight: 400
+        font-size: 14px
+        line-height: 22px
+        color: #FFFFFF
+        text-decoration: none
+        animation-delay: 700ms
+        &:hover
+            background: #C1EAEC
+            color: #000
+    &__prev
+        height: 100px
+        width: 100%
+        animation-delay: 1500ms
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+    &__tabs
+        display: flex
+        grid-gap: 10px
+        background: #C1EAEC
+        height: 54px
+        align-items: flex-end
+        justify-content: space-between
+        width: 100%
+        animation-delay: 1200ms
+        a
+            font-weight: 400
+            font-size: 12px
+            line-height: 22px
+            text-transform: uppercase
+            color: #000000
+            text-decoration: none
+            padding: 16px 16px
+            &.active, &:hover
+                padding-bottom: 25px
+                background: #E84A43
+                color: #fff
+.gal
+    padding-top: 40px
+    padding-bottom: 50px
+    &__tabs
+        display: flex
+        grid-gap: 30px
+        background: #C1EAEC
+        margin-bottom: 20px
+        height: 46px
+        align-items: flex-end
+        justify-content: space-between
+        width: 914px
+        a
+            font-weight: 400
+            font-size: 12px
+            line-height: 22px
+            text-transform: uppercase
+            color: #000000
+            text-decoration: none
+            padding: 12px 19px
+            &.active, &:hover
+                padding: 19px
+                background: #E84A43
+                color: #fff
+        &-wrap
+            display: flex
+    &__cont
+        &-block
+            height: 0
+            overflow: hidden
+            &.active
+                height: auto
+    &__wrap
+        display: flex
+        justify-content: space-between
+        .swiper
+            width: 914px
+            margin: 0
+            img
+                width: 100%
+                height: 572px
+                object-fit: cover
+    &__right
+        width: calc((100% + 60px) * 1 /3 - 30px)
+    &__prev
+        height: 260px
+        width: 100%
+        margin-bottom: 44px
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+    &__name
+        font-weight: 400
+        font-size: 16px
+        line-height: 22px
+        text-transform: uppercase
+        margin-bottom: 10px
+    &__descr
+        font-weight: 300
+        font-size: 14px
+        line-height: 22px
+        margin: 0
+        margin-bottom: 58px
+    &__arrows
+        display: flex
+        grid-gap: 7px
 .home
+    &-portf
+        padding-top: 50px
+        padding-bottom: 40px
+        &__title
+            margin: 0
+            margin-bottom: 56px
+            font-family: 'DINNeuzeitGrotesk LT BoldCond'
+            font-weight: 700
+            font-size: 54px
+            line-height: 60px
+            text-transform: uppercase
+            color: #000000
+        &__wrap
+            display: flex
+            justify-content: space-between
+            grid-gap: 16px
+        &__middle
+            width: 464px
+            height: 653px
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
+        &__last
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            width: calc((100% + 60px) * 1 /3 - 30px)
+        &__bot
+            font-weight: 400
+            font-size: 12px
+            line-height: 22px
+            text-align: right
+            text-transform: uppercase
+            color: #3EA4A6
+            margin: 0
+            max-width: 311px
+            margin-left: auto
+        &__text
+            &>b
+                margin-bottom: 12px
+                display: block
+                font-weight: 600
+                font-size: 16px
+                line-height: 22px
+                text-transform: uppercase
+            p
+                max-width: 362px
+                font-weight: 300
+                font-size: 14px
+                line-height: 22px
+                color: #000000
+                margin-top: 0
+                margin-bottom: 22px
+        &__main
+            width: 434px
+            display: flex
+            justify-content: space-between
+            flex-direction: column
+        &__small
+            height: 334px
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
+        &__prev
+            height: 319px
+            width: 100%
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
+    &-ab
+        padding-top: 100px
+        padding-bottom: 50px
+        &__top
+            display: flex
+            justify-content: space-between
+            margin-bottom: 70px
+        &__right
+            width: calc((100% + 60px) * 2 /3 - 30px)
+            display: flex
+            justify-content: space-between
+        &__col
+            width: calc(50% - 15px)
+        &__name
+            font-weight: 600
+            font-size: 16px
+            line-height: 22px
+            text-transform: uppercase
+            margin-bottom: 12px
+        &__text
+            margin-top: 0
+            font-weight: 300
+            font-size: 14px
+            line-height: 22px
+            color: #000000
+            margin-bottom: 6px
+            max-width: 328px
+        &__titles
+            width: calc((100% + 60px) * 1 /3 - 30px)
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+        &__title
+            margin: 0
+            font-family: 'DINNeuzeitGrotesk LT BoldCond'
+            font-weight: 700
+            font-size: 54px
+            line-height: 60px
+            text-transform: uppercase
+            color: #000000
+        &__descr
+            font-size: 12px
+            line-height: 18px
+            text-transform: uppercase
+            color: #3EA4A6
+            max-width: 282px
+        &__wrap
+            display: flex
+            justify-content: space-between
+        &__img
+            width: calc(100% - ((100% + 60px) * 1 / 3 - 30px) - 15px)
+            height: 617px
+            img
+                height: 617px
+                width: 100%
+                object-fit: cover
+        &__last
+            width: calc((100% + 60px) * 1 /3 - 30px)
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+        &__prev
+            width: 100%
+            height: 436px
+            img
+                height: 436px
+                width: 100%
+                object-fit: cover
+        &__bot
+            &> b
+                margin-bottom: 12px
+                display: block
+                font-weight: 600
+                font-size: 16px
+                line-height: 22px
+                max-width: 311px
+                margin-right: 0
+                margin-left: auto
+                text-align: right
+                text-transform: uppercase
+            p
+                max-width: 328px
+                margin: 0
+                margin-left: auto
+                font-weight: 300
+                font-size: 14px
+                line-height: 22px
+                text-align: right
     &-rev
         padding: 50px 0
         &__title

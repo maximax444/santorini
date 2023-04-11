@@ -82,6 +82,29 @@ const swiper3 = new Swiper('.home-rev__cont > .swiper', {
         prevEl: '.home-rev__prev',
     }
 });
+const swiper4 = new Swiper('.home-ab__img > .swiper', {
+    fadeEffect: { crossFade: true },
+    slidesPerView: 1,
+    spaceBetween: 16,
+    loop: true,
+    speed: 700,
+    effect: "fade",
+    autoplay: {
+        delay: 3000,
+    }
+});
+const swiper5 = new Swiper('.home-ab__prev > .swiper', {
+    lazy: true,
+    slidesPerView: 1,
+    spaceBetween: 16,
+    speed: 700,
+    loop: true,
+    effect: "fade",
+    fadeEffect: { crossFade: true },
+    autoplay: {
+        delay: 4000,
+    }
+});
 $('.header__burg').on('click', function (e) {
     e.preventDefault();
     $(this).toggleClass('active');
@@ -99,3 +122,133 @@ $(document).mouseup(function (e) { // событие клика по веб-до
         $('.header__right').removeClass('active');
     }
 });
+
+(function ($) {
+    $(function () {
+
+        $('.gal__tabs').on('click', 'a:not(.active)', function (e) {
+            e.preventDefault();
+            $(this)
+                .addClass('active').siblings().removeClass('active')
+                .closest('.gal').find('.gal__cont-block').removeClass('active').eq($(this).index()).addClass('active');
+        });
+
+    });
+})(jQuery);
+
+const sw1 = new Swiper('.sw1', {
+    lazy: true,
+    slidesPerView: 1,
+    spaceBetween: 16,
+    speed: 700,
+    loop: true,
+    effect: "fade"
+});
+const sw2 = new Swiper('.sw2', {
+    lazy: true,
+    slidesPerView: 1,
+    spaceBetween: 16,
+    speed: 700,
+    loop: true,
+    effect: "fade"
+});
+const sw3 = new Swiper('.sw3', {
+    lazy: true,
+    slidesPerView: 1,
+    spaceBetween: 16,
+    speed: 700,
+    loop: true,
+    effect: "fade"
+});
+const sw4 = new Swiper('.sw4', {
+    lazy: true,
+    slidesPerView: 1,
+    spaceBetween: 16,
+    speed: 700,
+    loop: true,
+    effect: "fade"
+});
+const sw5 = new Swiper('.sw5', {
+    lazy: true,
+    slidesPerView: 1,
+    spaceBetween: 16,
+    speed: 700,
+    loop: true,
+    effect: "fade"
+});
+const sw6 = new Swiper('.sw6', {
+    lazy: true,
+    slidesPerView: 1,
+    spaceBetween: 16,
+    speed: 700,
+    loop: true,
+    effect: "fade"
+});
+const sw7 = new Swiper('.sw7', {
+    lazy: true,
+    slidesPerView: 1,
+    spaceBetween: 16,
+    speed: 700,
+    loop: true,
+    effect: "fade"
+});
+const sw8 = new Swiper('.sw8', {
+    lazy: true,
+    slidesPerView: 1,
+    spaceBetween: 16,
+    speed: 700,
+    loop: true,
+    effect: "fade"
+});
+const swiper9 = new Swiper('.main__slider', {
+    lazy: true,
+    slidesPerView: 1,
+    spaceBetween: 16,
+    speed: 700,
+    loop: true,
+    effect: "fade",
+    autoplay: {
+        delay: 4000,
+    }
+});
+swiper9.on("slideChange", function (e) {
+    $('.main__tabs .active').removeClass('active');
+    $('.main__tabs a').eq(e.activeIndex % 5 - 1).addClass('active');
+    $('.main__prev').find('img').attr('src', $('.main__tabs a').eq(e.activeIndex % 5 - 1).attr('data-prev'));
+    console.log(e.activeIndex)
+});
+(function ($) {
+    $(function () {
+
+        $('.main__tabs').on('click', 'a:not(.active)', function (e) {
+            e.preventDefault();
+            $(this).addClass('active').siblings().removeClass('active');
+            $('.main__prev').find('img').attr('src', $(this).attr('data-prev'));
+            swiper9.slideTo($(this).index() + 1);
+        });
+
+    });
+})(jQuery);
+let instanceNestedSlider = [sw1, sw2, sw3, sw4, sw5, sw6, sw7, sw8];
+$('.gal__prev').on('click', function () {
+    instanceNestedSlider[$(this).closest('.gal__cont-block').index()].slideNext();
+});
+$('.gal__right .left').on('click', function () {
+    instanceNestedSlider[$(this).closest('.gal__cont-block').index()].slidePrev();
+});
+$('.gal__right .right').on('click', function () {
+    instanceNestedSlider[$(this).closest('.gal__cont-block').index()].slideNext();
+});
+for (var i = 0; i < instanceNestedSlider.length; i++) {
+    instanceNestedSlider[i].on("slideChange", function (e) {
+
+        if ($(e.el).find('.swiper-slide-next').next('.swiper-slide').length) {
+            $(e.el).closest('.gal__cont-block').find('.gal__prev img').attr('src', $(e.el).find('.swiper-slide-next').next('.swiper-slide').find('img').attr('src'))
+        } else {
+            $(e.el).closest('.gal__cont-block').find('.gal__prev img').attr('src', $(e.el).find('.swiper-slide').eq(2).find('img').attr('src'))
+        }
+
+
+        console.log(e.previousIndex - e.activeIndex);
+    });
+}
