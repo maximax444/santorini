@@ -2,6 +2,9 @@
     width: 100%
     padding-left: 30px
     padding-right: 30px
+.wrapper
+    overflow: hidden
+    padding-top: 69px
 .footer
     padding: 0 30px
     padding-bottom: 38px
@@ -114,7 +117,8 @@
     display: flex
     justify-content: space-between
     align-items: center
-    position: sticky
+    position: fixed
+    width: 100%
     top: 0
     z-index: 5
     background-color: #fff
@@ -177,6 +181,9 @@
         img
             width: 100%
 @media(max-width: 991px)
+    .wrapper
+        overflow: hidden
+        padding-top: 69px
     .container
         padding-left: 30px
         padding-right: 30px
@@ -245,6 +252,9 @@
             margin-left: 30px
             width: 159px
 @media(max-width: 767px)
+    .wrapper
+        overflow: hidden
+        padding-top: 76px
     .left, .right
         width: 71px
         height: 32px

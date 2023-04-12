@@ -110,6 +110,15 @@ $('.header__burg').on('click', function (e) {
     $(this).toggleClass('active');
     $('.header__right').toggleClass('active');
 });
+$('.header__menu a').on('click', function () {
+    $('.header__burg').removeClass('active');
+    $('.header__right').removeClass('active');
+});
+$("body").on('click', '[href*="#"]', function (e) {
+    var fixed_offset = 50;
+    $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 1000);
+    e.preventDefault();
+});
 $(document).mouseup(function (e) { // событие клика по веб-документу
     var div = $(".header__menu"); // тут указываем ID элемента
     var div2 = $(".header__contact");
@@ -210,6 +219,14 @@ const swiper9 = new Swiper('.main__slider', {
     autoplay: {
         delay: 4000,
     }
+});
+const swiper10 = new Swiper('.home-portf .swiper', {
+    lazy: true,
+    slidesPerView: 1,
+    spaceBetween: 16,
+    speed: 700,
+    loop: true,
+    effect: "fade"
 });
 swiper9.on("slideChange", function (e) {
     $('.main__tabs .active').removeClass('active');
