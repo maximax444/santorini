@@ -2,6 +2,39 @@
     width: 100%
     padding-left: 30px
     padding-right: 30px
+.preloader
+    position: fixed
+    top: 0
+    left: 0
+    width: 100vw
+    height: 100vh
+    z-index: 11
+    background-color: #fff
+    display: flex
+    justify-content: center
+    align-items: center
+    transition: all 0.5s
+    &.active
+        opacity: 0
+        pointer-events: none
+    &__wrap
+        width: 1000px
+        position: relative
+        img
+            width: 100%
+    &__gray
+        filter: grayscale(1)
+    &__img
+        position: absolute
+        top: 0
+        left: 0
+        width: 0
+        overflow: hidden
+        transition: all 1.5s
+        img
+            width: 1000px
+        &.active
+            width: 1000px
 .wrapper
     overflow: hidden
     padding-top: 69px
@@ -122,7 +155,7 @@
     top: 0
     z-index: 5
     background-color: #fff
-    animation-delay: 2000ms
+    animation-delay: 4000ms
     &__burg
         display: none
     &__right

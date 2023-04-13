@@ -290,3 +290,10 @@ for (var i = 0; i < instanceNestedSlider.length; i++) {
         console.log(e.previousIndex - e.activeIndex);
     });
 }
+$('.preloader__img').addClass('active');
+setTimeout(function () {
+    $('.preloader').addClass('active');
+}, 2000);
+setTimeout(function () {
+    $('.preloader').hide();
+}, 3000);
