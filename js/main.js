@@ -19,14 +19,14 @@ const swiper = new Swiper('.home-cat .swiper', {
             spaceBetween: 20
         },
         // when window width is >= 480px
-        768: {
+        601: {
             slidesPerView: 2,
             slidesPerGroup: 2,
             effect: 0,
             spaceBetween: 14
         },
         // when window width is >= 640px
-        992: {
+        1101: {
             slidesPerView: 3,
             slidesPerGroup: 3,
             effect: 0,
@@ -55,14 +55,14 @@ const swiper2 = new Swiper('.home-rev__wrap > .swiper', {
             spaceBetween: 20
         },
         // when window width is >= 480px
-        768: {
+        601: {
             slidesPerView: 2,
             slidesPerGroup: 2,
             effect: 0,
             spaceBetween: 14
         },
         // when window width is >= 640px
-        992: {
+        1101: {
             slidesPerView: 2,
             slidesPerGroup: 2,
             effect: 0,
@@ -131,7 +131,28 @@ $(document).mouseup(function (e) { // событие клика по веб-до
         $('.header__right').removeClass('active');
     }
 });
-
+$('.overlay-thx__btn').on('click', function (e) {
+    e.preventDefault();
+    $('.overlay-thx').removeClass('overlay-active');
+    $('body').css('overflow', 'visible');
+});
+$('.overlay-thx').on('click', function (e) {
+    if (!(($(e.target).parents('.popup').length) || ($(e.target).hasClass('popup')))) {
+        $('body').css("overflow", "visible");
+        $('.overlay-thx').removeClass('overlay-active');
+    }
+});
+$('.overlay-call').on('click', function (e) {
+    if (!(($(e.target).parents('.popup').length) || ($(e.target).hasClass('popup')))) {
+        $('body').css("overflow", "visible");
+        $('.overlay-call').removeClass('overlay-active');
+    }
+});
+$('.home-cat__btn, .main__btn, .footer__btn').on('click', function (e) {
+    e.preventDefault();
+    $('.overlay-call').addClass('overlay-active');
+    $('body').css("overflow", "hidden");
+});
 (function ($) {
     $(function () {
 

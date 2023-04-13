@@ -1,0 +1,609 @@
+.overlay
+    width: 100vw
+    height: 100vh
+    position: fixed
+    top: 0
+    left: 0
+    background-color: rgba(0, 0, 0, .502)
+    z-index: 11
+    display: none
+    justify-content: center
+    align-items: center
+    &-active
+        display: flex
+    &-call
+        .popup
+            width: 1280px
+            max-width: 95%
+            height: 720px
+            background: #FFFFFF
+            display: flex
+            align-items: center
+            justify-content: space-between
+        &__img
+            width: 50%
+            height: 100%
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
+        &__cont
+            width: 50%
+            padding: 64px 85px
+        &__title
+            font-family: 'DINNeuzeitGrotesk LT BoldCond'
+            font-style: normal
+            font-weight: 700
+            font-size: 54px
+            line-height: 60px
+            margin-bottom: 21px
+            margin-top: 0
+            text-transform: uppercase
+            color: #000000
+        &__descr
+            font-weight: 300
+            font-size: 14px
+            line-height: 22px
+            margin-right: -10px
+            margin: 0
+        &__links
+            display: flex
+            align-items: center
+            justify-content: flex-end
+            grid-gap: 25px
+            margin-bottom: 13px
+            a
+                font-weight: 300
+                font-size: 10px
+                line-height: 22px
+                text-decoration-line: underline
+                color: #000000
+                &:hover
+                    color: #E84A43
+        &__form
+            input
+                width: 100%
+                margin-bottom: 10px
+                display: block
+                padding: 9px 18px
+                border: 0
+                background: #C1EAEC
+                font-weight: 300
+                font-size: 12px
+                line-height: 22px
+                color: #3EA4A6
+            ::placeholder
+                color: inherit
+            textarea
+                margin-bottom: 26px
+                height: 108px
+                width: 100%
+                background: #C1EAEC
+                padding: 9px 18px
+                border: 0
+                font-weight: 300
+                font-size: 12px
+                line-height: 22px
+                color: #3EA4A6
+            button
+                margin-top: 5px
+                width: 217px
+                height: 48px
+                background: #E84A43
+                font-weight: 400
+                font-size: 14px
+                line-height: 22px
+                color: #FFFFFF
+                display: flex
+                justify-content: center
+                align-items: center
+                text-decoration: none
+                transition: all 0.3s
+                border: 0
+                &:hover
+                    color: #000
+                    background: #C1EAEC
+        &__bottom
+            display: flex
+            justify-content: space-between
+            align-items: flex-start
+        &__checks
+            width: 236px
+            label
+                position: relative
+                display: flex
+                align-items: flex-start
+                margin-bottom: 16px
+                grid-gap: 13px
+                p
+                    font-weight: 300
+                    font-size: 10px
+                    line-height: 12px
+                    max-width: 211px
+                    margin: 0
+                input
+                    width: 0
+                    height: 0
+                    overflow: hidden
+                    margin: 0
+                    padding: 0
+                    visibility: hidden
+                    opacity: 0
+                    position: absolute
+                    top: 0
+                    left: 0
+                    &+span
+                        background: #FFFFFF
+                        border: 1px solid #C1EAEC
+                        width: 12px
+                        height: 12px
+                        position: relative
+                    &:checked + span
+                        &::after
+                            content: ""
+                            display: block
+                            width: 8px
+                            height: 8px
+                            background: #E84A43
+                            position: absolute
+                            top: 1px
+                            left: 1px
+    &-thx
+        .popup
+            width: 1280px
+            max-width: 95%
+            height: 720px
+            background: #FFFFFF
+            display: flex
+            align-items: center
+            justify-content: space-between
+        &__img
+            width: 65%
+            height: 100%
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
+        &__cont
+            width: 35%
+            padding: 40px
+            padding-left: 85px
+        &__title
+            margin: 0
+            font-family: 'DINNeuzeitGrotesk LT BoldCond'
+            font-style: normal
+            font-weight: 700
+            font-size: 54px
+            line-height: 60px
+            text-transform: uppercase
+            color: #000000
+            margin-bottom: 21px
+        &__descr
+            font-weight: 300
+            font-size: 14px
+            line-height: 22px
+            margin: 0
+            margin-bottom: 32px
+        &__btn
+            width: 217px
+            height: 48px
+            background: #E84A43
+            font-weight: 400
+            font-size: 14px
+            line-height: 22px
+            color: #FFFFFF
+            display: flex
+            justify-content: center
+            align-items: center
+            text-decoration: none
+            &:hover
+                color: #000
+                background: #C1EAEC
+@media(max-width: 1400px)
+    .overlay
+        width: 100vw
+        height: 100vh
+        position: fixed
+        top: 0
+        left: 0
+        background-color: rgba(0, 0, 0, .502)
+        z-index: 11
+        display: none
+        justify-content: center
+        align-items: center
+        &-active
+            display: flex
+        &-call
+            .popup
+                width: 1280px
+                max-width: 95%
+                height: 720px
+                background: #FFFFFF
+                display: flex
+                align-items: center
+                justify-content: space-between
+            &__img
+                width: 50%
+                height: 100%
+                img
+                    width: 100%
+                    height: 100%
+                    object-fit: cover
+            &__cont
+                width: 50%
+                padding: 64px 45px
+            &__title
+                font-family: 'DINNeuzeitGrotesk LT BoldCond'
+                font-style: normal
+                font-weight: 700
+                font-size: 54px
+                line-height: 60px
+                margin-bottom: 21px
+                margin-top: 0
+                text-transform: uppercase
+                color: #000000
+            &__descr
+                font-weight: 300
+                font-size: 14px
+                line-height: 22px
+                margin-right: -10px
+                margin: 0
+            &__links
+                display: flex
+                align-items: center
+                justify-content: flex-end
+                grid-gap: 25px
+                margin-bottom: 13px
+                a
+                    font-weight: 300
+                    font-size: 10px
+                    line-height: 22px
+                    text-decoration-line: underline
+                    color: #000000
+                    &:hover
+                        color: #E84A43
+            &__form
+                input
+                    width: 100%
+                    margin-bottom: 10px
+                    display: block
+                    padding: 9px 18px
+                    border: 0
+                    background: #C1EAEC
+                    font-weight: 300
+                    font-size: 12px
+                    line-height: 22px
+                    color: #3EA4A6
+                ::placeholder
+                    color: inherit
+                textarea
+                    margin-bottom: 26px
+                    height: 108px
+                    width: 100%
+                    background: #C1EAEC
+                    padding: 9px 18px
+                    border: 0
+                    font-weight: 300
+                    font-size: 12px
+                    line-height: 22px
+                    color: #3EA4A6
+                button
+                    margin-top: 5px
+                    width: 217px
+                    height: 48px
+                    background: #E84A43
+                    font-weight: 400
+                    font-size: 14px
+                    line-height: 22px
+                    color: #FFFFFF
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    text-decoration: none
+                    transition: all 0.3s
+                    border: 0
+                    &:hover
+                        color: #000
+                        background: #C1EAEC
+            &__bottom
+                display: flex
+                justify-content: space-between
+                align-items: flex-start
+            &__checks
+                width: 236px
+                label
+                    position: relative
+                    display: flex
+                    align-items: flex-start
+                    margin-bottom: 16px
+                    grid-gap: 13px
+                    p
+                        font-weight: 300
+                        font-size: 10px
+                        line-height: 12px
+                        max-width: 211px
+                        margin: 0
+                    input
+                        width: 0
+                        height: 0
+                        overflow: hidden
+                        margin: 0
+                        padding: 0
+                        visibility: hidden
+                        opacity: 0
+                        position: absolute
+                        top: 0
+                        left: 0
+                        &+span
+                            background: #FFFFFF
+                            border: 1px solid #C1EAEC
+                            width: 12px
+                            height: 12px
+                            position: relative
+                        &:checked + span
+                            &::after
+                                content: ""
+                                display: block
+                                width: 8px
+                                height: 8px
+                                background: #E84A43
+                                position: absolute
+                                top: 1px
+                                left: 1px
+        &-thx
+            .popup
+                width: 1280px
+                max-width: 95%
+                height: 720px
+                background: #FFFFFF
+                display: flex
+                align-items: center
+                justify-content: space-between
+            &__img
+                width: 65%
+                height: 100%
+                img
+                    width: 100%
+                    height: 100%
+                    object-fit: cover
+            &__cont
+                width: 35%
+                padding: 40px
+                padding-left: 85px
+            &__title
+                margin: 0
+                font-family: 'DINNeuzeitGrotesk LT BoldCond'
+                font-style: normal
+                font-weight: 700
+                font-size: 54px
+                line-height: 60px
+                text-transform: uppercase
+                color: #000000
+                margin-bottom: 21px
+            &__descr
+                font-weight: 300
+                font-size: 14px
+                line-height: 22px
+                margin: 0
+                margin-bottom: 32px
+            &__btn
+                width: 217px
+                height: 48px
+                background: #E84A43
+                font-weight: 400
+                font-size: 14px
+                line-height: 22px
+                color: #FFFFFF
+                display: flex
+                justify-content: center
+                align-items: center
+                text-decoration: none
+                &:hover
+                    color: #000
+                    background: #C1EAEC
+@media(max-width: 1100px)
+    .overlay
+        &-call
+            .popup
+                width: 1280px
+                max-width: 95%
+                height: 720px
+            &__img
+            &__cont
+                width: 50%
+                padding: 64px 25px
+            &__title
+                font-size: 42px
+                line-height: 48px
+                margin-bottom: 21px
+                margin-top: 0
+            &__descr
+                font-size: 14px
+                line-height: 22px
+                margin-right: -10px
+                margin: 0
+            &__links
+                grid-gap: 25px
+                margin-bottom: 13px
+                a
+                    font-size: 10px
+                    line-height: 22px
+            &__form
+                input
+                    width: 100%
+                    margin-bottom: 10px
+                    padding: 9px 18px
+                    border: 0
+                    font-size: 12px
+                    line-height: 22px
+                textarea
+                    margin-bottom: 26px
+                    height: 108px
+                    width: 100%
+                    padding: 9px 18px
+                    border: 0
+                    font-size: 12px
+                    line-height: 22px
+                button
+                    margin-top: 5px
+                    width: 100%
+                    height: 48px
+                    font-size: 14px
+                    line-height: 22px
+            &__bottom
+                display: block
+            &__checks
+                width: 236px
+                label
+                    margin-bottom: 16px
+                    grid-gap: 13px
+                    p
+                        font-size: 10px
+                        line-height: 12px
+                        max-width: 211px
+                        margin: 0
+                    input
+                        &+span
+                            border: 1px solid #C1EAEC
+                            width: 12px
+                            height: 12px
+                        &:checked + span
+                            &::after
+                                width: 8px
+                                height: 8px
+                                top: 1px
+                                left: 1px
+        &-thx
+            .popup
+                width: 1280px
+                height: 520px
+            &__cont
+                padding: 40px
+            &__title
+                margin: 0
+                font-size: 54px
+                line-height: 60px
+                margin-bottom: 21px
+            &__descr
+                font-size: 14px
+                line-height: 22px
+                margin: 0
+                margin-bottom: 32px
+            &__btn
+                width: 217px
+                height: 48px
+                font-size: 14px
+                line-height: 22px
+            &__cont
+                width: 45%
+                padding-left: 40px
+            &__img
+                width: 55%
+@media(max-width: 600px)
+    .overlay
+        padding: 20px
+        overflow-y: scroll
+        &-call
+            align-items: flex-start
+            .popup
+                width: calc(100vw - 40px)
+                max-width: 100vw
+                height: auto
+            &__img
+                display: none
+            &__cont
+                width: 100%
+                padding: 35px 20px
+            &__title
+                font-size: 42px
+                line-height: 42px
+                margin-bottom: 23px
+                margin-top: 0
+            &__descr
+                font-size: 14px
+                line-height: 22px
+                margin-right: 0px
+                margin: 0
+                margin-bottom: 15px
+            &__links
+                grid-gap: 25px
+                margin-bottom: 23px
+                justify-content: flex-start
+                a
+                    font-size: 12px
+                    line-height: 22px
+            &__form
+                input
+                    width: 100%
+                    margin-bottom: 10px
+                    padding: 9px 18px
+                    border: 0
+                    font-size: 12px
+                    line-height: 22px
+                textarea
+                    margin-bottom: 18px
+                    height: 108px
+                    width: 100%
+                    padding: 9px 18px
+                    border: 0
+                    font-size: 12px
+                    line-height: 22px
+                button
+                    margin-top: 5px
+                    width: 100%
+                    height: 48px
+                    font-size: 14px
+                    line-height: 22px
+            &__bottom
+                display: block
+            &__checks
+                width: 100%
+                label
+                    margin-bottom: 16px
+                    grid-gap: 13px
+                    p
+                        font-size: 12px
+                        line-height: 14px
+                        max-width: 264px
+                        margin: 0
+                    input
+                        &+span
+                            border: 1px solid #C1EAEC
+                            width: 12px
+                            height: 12px
+                        &:checked + span
+                            &::after
+                                width: 8px
+                                height: 8px
+                                top: 1px
+                                left: 1px
+        &-thx
+            align-items: flex-start
+            .popup
+                width: calc(100vw - 40px)
+                max-width: 100vw
+                height: auto
+                flex-direction: column-reverse
+            &__title
+                margin: 0
+                font-size: 54px
+                line-height: 60px
+                margin-bottom: 21px
+            &__descr
+                font-size: 14px
+                line-height: 22px
+                margin: 0
+                margin-bottom: 32px
+                max-width: 268px
+            &__btn
+                width: 217px
+                height: 48px
+                font-size: 14px
+                line-height: 22px
+            &__cont
+                width: 100%
+                padding: 40px 23px
+                padding-bottom: 34px
+            &__img
+                width: 100%
+                height: 288px
