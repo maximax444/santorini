@@ -214,6 +214,39 @@
         img
             width: 100%
 @media(max-width: 1400px)
+    .preloader
+        position: fixed
+        top: 0
+        left: 0
+        width: 100vw
+        height: 100vh
+        z-index: 11
+        background-color: #fff
+        display: flex
+        justify-content: center
+        align-items: center
+        transition: all 0.5s
+        &.active
+            opacity: 0
+            pointer-events: none
+        &__wrap
+            width: 1000px
+            position: relative
+            img
+                width: 100%
+        &__gray
+            filter: grayscale(1)
+        &__img
+            position: absolute
+            top: 0
+            left: 0
+            width: 0
+            overflow: hidden
+            transition: all 1.5s
+            img
+                width: 1000px
+            &.active
+                width: 1000px
     .container
         width: 100%
         padding-left: 30px
@@ -397,6 +430,39 @@
             img
                 width: 100%
 @media(max-width: 1100px)
+    .preloader
+        position: fixed
+        top: 0
+        left: 0
+        width: 100vw
+        height: 100vh
+        z-index: 11
+        background-color: #fff
+        display: flex
+        justify-content: center
+        align-items: center
+        transition: all 0.5s
+        &.active
+            opacity: 0
+            pointer-events: none
+        &__wrap
+            width: 600px
+            position: relative
+            img
+                width: 100%
+        &__gray
+            filter: grayscale(1)
+        &__img
+            position: absolute
+            top: 0
+            left: 0
+            width: 0
+            overflow: hidden
+            transition: all 1.5s
+            img
+                width: 600px
+            &.active
+                width: 600px
     .wrapper
         overflow: hidden
         padding-top: 69px
@@ -468,6 +534,39 @@
             margin-left: 30px
             width: 159px
 @media(max-width: 600px)
+    .preloader
+        position: fixed
+        top: 0
+        left: 0
+        width: 100vw
+        height: 100vh
+        z-index: 11
+        background-color: #fff
+        display: flex
+        justify-content: center
+        align-items: center
+        transition: all 0.5s
+        &.active
+            opacity: 0
+            pointer-events: none
+        &__wrap
+            width: 90vw
+            position: relative
+            img
+                width: 100%
+        &__gray
+            filter: grayscale(1)
+        &__img
+            position: absolute
+            top: 0
+            left: 0
+            width: 0
+            overflow: hidden
+            transition: all 1.5s
+            img
+                width: 90vw
+            &.active
+                width: 90vw
     .wrapper
         overflow: hidden
         padding-top: 76px
