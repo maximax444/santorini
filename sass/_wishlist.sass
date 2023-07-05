@@ -1,0 +1,100 @@
+.wishlist
+    &__descr
+        margin: 0
+        margin-bottom: 2.083333333333333vw
+        margin-top: -1.3888888888888888vw
+        font-size: 0.9722222222222222vw
+        font-weight: 300
+        line-height: 1.5277777777777777vw
+    &__wrap
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-gap: 2.7777777777777777vw 1.0416666666666665vw
+    &__block
+        position: relative
+    &__close
+        position: absolute
+        top: 0.6944444444444444vw
+        right: 0.6944444444444444vw
+        width: 1.8055555555555554vw
+        height: 1.8055555555555554vw
+        border-radius: 50%
+        display: flex
+        align-items: center
+        justify-content: center
+        background-color: #fff
+        transition: all 0.3s
+        border: 0
+        z-index: 2
+        opacity: 0
+        &:hover
+            transform: scale(1.2)
+    &__block:hover
+        .wishlist__close
+            opacity: 1
+@media(max-width: 1400px)
+    .wishlist
+        &__descr
+            margin-bottom: 2.6785714285714284vw
+            margin-top: -1.7857142857142856vw
+            font-size: 1.25vw
+            line-height: 1.9642857142857142vw
+        &__wrap
+            grid-template-columns: repeat(3, 1fr)
+            grid-gap: 3.571428571428571vw 1.3392857142857142vw
+        &__close
+            top: 0.8928571428571428vw
+            right: 0.8928571428571428vw
+            width: 2.3214285714285716vw
+            height: 2.3214285714285716vw
+@media(max-width: 1100px)
+    .wishlist
+        &__descr
+            margin-bottom: 3.90625vw
+            margin-top: -2.604166666666667vw
+            font-size: 1.8229166666666667vw
+            line-height: 2.864583333333333vw
+        &__wrap
+            grid-template-columns: repeat(2, 1fr)
+            grid-gap: 5.208333333333334vw 1.953125vw
+        &__close
+            top: 1.3020833333333335vw
+            right: 1.3020833333333335vw
+            width: 3.3854166666666665vw
+            height: 3.3854166666666665vw
+@media(max-width: 600px)
+    .wishlist
+        &__descr
+            margin-bottom: 8.0vw
+            margin-top: 0.0vw
+            font-size: 3.733333333333334vw
+            line-height: 5.866666666666666vw
+        &__wrap
+            grid-template-columns: repeat(1, 1fr)
+            grid-gap: 10.666666666666668vw 4.0vw
+            padding-bottom: 20.0vw
+        &__close
+            top: 2.666666666666667vw
+            right: 2.666666666666667vw
+            width: 6.933333333333333vw
+            height: 6.933333333333333vw
+            opacity: 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

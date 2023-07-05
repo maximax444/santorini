@@ -83,7 +83,7 @@
         padding: 0
         margin: 0
         list-style-type: none
-        grid-gap: 5.48611111111vw
+        grid-gap: 3.194444444444444vw
         a
             font-size: 0.972222222222vw
             line-height: 1.52777777778vw
@@ -156,6 +156,8 @@
     z-index: 5
     background-color: #fff
     animation-delay: 4000ms
+    &.in
+        border-bottom: 0.06944444444444445vw solid #C1EAEC
     &__burg
         display: none
     &__right
@@ -165,19 +167,52 @@
         justify-content: space-between
     &__menu
         display: flex
-        grid-gap: 4.30555555556vw
+        grid-gap: 2.5vw
         align-items: center
         list-style-type: none
         padding: 0
         margin: 0
+        &>li
+            position: relative
+            &>a
+                height: 4.791666666666667vw
         a
             font-weight: 400
             font-size: 0.833333333333vw
             line-height: 1.52777777778vw
             color: #000000
             text-decoration: none
+            display: flex
+            align-items: center
+            grid-gap: 0.2777777777777778vw
+            path, svg
+                transition: all 0.3s
             &:hover
                 color: #E84A43
+                path
+                    fill: #E84A43
+                svg
+                    transform: rotate(180deg)
+        ul
+            display: none
+            position: absolute
+            z-index: 22
+            top: 100%
+            left: 0
+            border: 0.06944444444444445vw solid #C1EAEC
+            background-color: #fff
+            margin: 0
+            padding: 0
+            list-style-type: none
+            width: 13.88888888888889vw
+            a
+                padding: 0.7638888888888888vw 1.4583333333333333vw
+                display: block
+                border-top: 0.06944444444444445vw solid #C1EAEC
+                margin-top: -0.06944444444444445vw
+                &:hover
+                    color: #fff
+                    background: #E84A43
     &__contact
         background: #C1EAEC
         width: 16.3194444444vw
@@ -189,6 +224,14 @@
     &__wa, &__mail
         width: 1.25vw
         height: 1.25vw
+        position: relative
+        span
+            position: absolute
+            color: #000
+            font-size: 0.5555555555555556vw
+            font-weight: 600
+            right: -0.3472222222222222vw
+            top: -0.1388888888888889vw
         svg
             width: 100%
             height: 100%
@@ -213,6 +256,11 @@
         display: flex
         img
             width: 100%
+@media(min-width: 601px)
+    .header__menu
+        &>li:hover
+            ul
+                display: block
 @media(max-width: 1400px)
     .preloader
         position: fixed
@@ -296,10 +344,12 @@
                 width: 100%
         &__menu
             display: flex
-            padding: 0
+            flex-wrap: wrap
+            justify-content: center
+            padding: 0 6vw
             margin: 0
             list-style-type: none
-            grid-gap: 4.375vw
+            grid-gap: 1vw 4.107142857142857vw
             a
                 font-size: 1.25vw
                 line-height: 1.96428571429vw
@@ -372,6 +422,8 @@
         z-index: 5
         background-color: #fff
         animation-delay: 2000ms
+        &.in
+            border-bottom: 0.08928571428571429vw solid #C1EAEC
         &__burg
             display: none
         &__right
@@ -381,11 +433,13 @@
             justify-content: space-between
         &__menu
             display: flex
-            grid-gap: 5.53571428571vw
+            grid-gap: 2.53571428571vw
             align-items: center
             list-style-type: none
             padding: 0
             margin: 0
+            &>li>a
+                height: 6.1607142857142865vw
             a
                 font-weight: 400
                 font-size: 1.07142857143vw
@@ -394,6 +448,13 @@
                 text-decoration: none
                 &:hover
                     color: #E84A43
+            ul
+                border: 0.08928571428571429vw solid #C1EAEC
+                width: 17.857142857142858vw
+                a
+                    padding: 0.9821428571428571vw 1.875vw
+                    border-top: 0.08928571428571429vw solid #C1EAEC
+                    margin-top: -0.08928571428571429vw
         &__contact
             background: #C1EAEC
             width: 20.9821428571vw
@@ -488,7 +549,7 @@
         &__logo
             width: 39.0625vw
         &__menu
-            grid-gap: 10.2864583333vw
+            grid-gap: 8.2864583333vw
             a
                 font-size: 1.82291666667vw
                 line-height: 2.86458333333vw
@@ -515,10 +576,21 @@
             &-wrap
                 width: 32.5520833333vw
     .header
+        &.in
+            border-bottom: 0.13020833333333331vw solid #C1EAEC
         &__menu
-            grid-gap: 3.25520833333vw
+            grid-gap: 1.25520833333vw
+            &>li>a
+                height: 8.984375vw
+            ul
+                border: 0.13020833333333331vw solid #C1EAEC
+                width: 26.041666666666668vw
+                a
+                    padding: 1.4322916666666665vw 2.734375vw
+                    border-top: 0.13020833333333331vw solid #C1EAEC
+                    margin-top: -0.13020833333333331vw
             a
-                font-size: 1.5625vw
+                font-size: 1.2625vw
                 line-height: 2.86458333333vw
         &__contact
             width: 30.5989583333vw
@@ -527,6 +599,10 @@
         &__wa, &__mail
             width: 2.34375vw
             height: 2.34375vw
+            span
+                font-size: 1.0416666666666665vw
+                right: -0.6510416666666667vw
+                top: -0.26041666666666663vw
         &__phone
             font-size: 1.82291666667vw
             line-height: 2.86458333333vw
@@ -589,8 +665,8 @@
             width: 64.8vw
             margin-bottom: 1.86666666667vw
         &__menu
-            grid-gap: 0.0vw
-            justify-content: space-between
+            grid-gap: 3.733333333333334vw 7.466666666666668vw
+            justify-content: center
             width: 100%
             a
                 font-size: 3.73333333333vw
@@ -627,12 +703,14 @@
             grid-gap: 6.66666666667vw
     .header
         padding: 4.8vw 5.33333333333vw
+        &.in
+            border-bottom: 0
         &__right
             position: fixed
-            top: 0
+            top: 20.533333333333335vw
             right: -100vw
             width: 100vw
-            height: 100vh
+            height: calc(100vh - 20.533333333333335vw)
             flex-direction: column
             align-items: flex-end
             z-index: 5
@@ -640,20 +718,39 @@
             &.active
                 right: 0
         &__menu
-            width: 50.1333333333vw
+            width: 100vw
             background: #FFFFFF
             border-left: 0.266666666667vw solid #C1EAEC
-            height: calc(100vh - 53.8666666667vw)
+            height: calc(100vh - 31.466666666666665vw - 20.533333333333335vw)
             flex-direction: column
             align-items: flex-start
-            grid-gap: 12.8vw
-            padding: 32.8vw 6.4vw
+            grid-gap: 2.8vw
+            padding: 12.8vw 6.4vw
+            overflow-y: scroll
+            &>li
+                width: 100%
+                &.clicked
+                    ul
+                        display: block
             a
                 font-size: 4.8vw
                 line-height: 5.86666666667vw
+                width: 100%
+                justify-content: space-between
+                svg
+                    width: 1.6vw
+                    height: auto
+            ul
+                width: 100%
+                position: static
+                border: 0
+                a
+                    border-top: 0
+                    margin-top: 0
+                    font-size: 3.733333333333334vw
         &__contact
-            width: 50.1333333333vw
-            height: 53.8666666667vw
+            width: 100vw
+            height: 31.466666666666665vw
             grid-gap: 10.4vw 5.86666666667vw
             flex-wrap: wrap
             padding: 6.4vw
@@ -663,6 +760,10 @@
         &__wa, &__mail
             width: 7.46666666667vw
             height: 7.46666666667vw
+            span
+                font-size: 2.5333333333333333vw
+                right: -1.3333333333333335vw
+                top: -1.1333333333333333vw
         &__phone
             font-size: 4.8vw
             line-height: 5.86666666667vw
@@ -719,3 +820,23 @@
                         top: 0
                         transform: rotate(-45deg)
                         background-color: #fff
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

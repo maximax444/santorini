@@ -1,0 +1,151 @@
+.ps
+    &-mid
+        padding-bottom: 0
+        border: 0
+        margin: 0
+    &__wrap
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-template-rows: repeat(2, 22.22222222222222vw)
+        grid-gap: 1.0416666666666665vw
+        margin-bottom: 3.3333333333333335vw
+    &__block
+        position: relative
+        overflow: hidden
+        &>img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            transition: all 2s
+        &:hover
+            &>img
+                transform: scale(1.2)
+            .loc
+                &__link
+                    opacity: 1
+                    transition: all 0.8s 0.8s
+                &__name
+                    height: 100%
+                    width: 20.833333333333336vw
+                    overflow: hidden
+        &:nth-child(1)
+            .loc__name
+                width: 17.569444444444443vw
+        &:nth-child(3)
+            .loc__name
+                width: 17.708333333333336vw
+        &:nth-child(2)
+            .loc__name
+                width: 18.40277777777778vw
+        &:nth-child(4)
+            grid-column: 1/4
+            .loc__name
+                width: 15.277777777777779vw
+@media(max-width: 1400px)
+    .ps
+        &__wrap
+            grid-template-columns: repeat(3, 1fr)
+            grid-template-rows: repeat(2, 28.57142857142857vw)
+            grid-gap: 1.3392857142857142vw
+            margin-bottom: 4.285714285714286vw
+        &__block
+            &:hover
+                .loc
+                    &__name
+                        width: 26.785714285714285vw
+            &:nth-child(1)
+                .loc__name
+                    width: 22.589285714285715vw
+            &:nth-child(3)
+                .loc__name
+                    width: 22.767857142857142vw
+            &:nth-child(2)
+                .loc__name
+                    width: 23.660714285714285vw
+            &:nth-child(4)
+                grid-column: 1/4
+                .loc__name
+                    width: 19.642857142857142vw
+@media(max-width: 1100px)
+    .ps
+        &__wrap
+            grid-template-columns: repeat(3, 1fr)
+            grid-template-rows: repeat(2, 31.25vw)
+            grid-gap: 1.953125vw
+            margin-bottom: 6.25vw
+        &__block
+            .loc__name
+                font-size: 2.825vw
+            &:hover
+                .loc
+                    &__name
+                        width: 39.0625vw
+            &:nth-child(1)
+                .loc__name
+                    width: 32.94270833333333vw
+            &:nth-child(3)
+                .loc__name
+                    width: 33.203125vw
+            &:nth-child(2)
+                .loc__name
+                    width: 34.50520833333333vw
+            &:nth-child(4)
+                grid-column: 1/4
+                .loc__name
+                    width: 28.645833333333332vw
+@media(max-width: 600px)
+    .ps
+        &__wrap
+            grid-template-columns: repeat(3, 1fr)
+            grid-template-rows: repeat(2, 31.25vw)
+            grid-gap: 1.953125vw
+            margin-bottom: 6.25vw
+        &__block
+            .loc__name
+                font-size: 2.825vw
+            &:hover
+                .loc
+                    &__name
+                        width: 80.0vw
+            &:nth-child(1)
+                .loc__name
+                    width: 67.46666666666667vw
+            &:nth-child(3)
+                .loc__name
+                    width: 68.0vw
+            &:nth-child(2)
+                .loc__name
+                    width: 70.66666666666667vw
+            &:nth-child(4)
+                grid-column: 1/4
+                .loc__name
+                    width: 58.666666666666664vw
+    .ps
+        &__wrap
+            display: block
+            grid-template-columns: repeat(3, 1fr)
+            grid-template-rows: repeat(2, 85.33333333333334vw)
+            grid-gap: 4.0vw
+            margin-bottom: 8.533333333333333vw
+        &__block
+            position: relative
+            overflow: hidden
+            display: flex
+            margin-bottom: 4.266666666666667vw
+            height: 64.0vw
+            .loc__name
+                font-size: 6.4vw
+
+
+
+
+
+
+
+
+
+
+
+
+
+

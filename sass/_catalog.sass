@@ -1,0 +1,346 @@
+.catalog
+    &__top
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-gap: 1.0416666666666665vw
+        margin-bottom: 1.875vw
+        p
+            font-size: 0.9722222222222222vw
+            font-weight: 300
+            line-height: 1.5277777777777777vw
+            margin: 0
+    &-filters
+        margin-bottom: 3.3333333333333335vw
+        background: #C1EAEC
+        padding: 0 2.083333333333333vw
+        display: flex
+        align-items: center
+        grid-gap: 3.4722222222222223vw
+        &__name
+            font-size: 0.8333333333333334vw
+            font-family: Myriad Pro
+            font-style: normal
+            font-weight: 400
+            display: flex
+            align-items: center
+            grid-gap: 0.4166666666666667vw
+            text-transform: uppercase
+            padding: 0.9027777777777777vw 0
+            svg
+                width: 0.4166666666666667vw
+                height: 0.2777777777777778vw
+                transition: all 0.3s
+        &__block
+            position: relative
+        &__drop
+            position: absolute
+            top: calc(100% - 0.06944444444444445vw)
+            width: 19.02777777777778vw
+            left: 0
+            z-index: 3
+            border: 0.06944444444444445vw solid #C1EAEC
+            background-color: #fff
+            display: none
+        &__el
+            position: relative
+            input
+                position: absolute
+                top: 0
+                left: 0
+                width: 0
+                height: 0
+                overflow: hidden
+                visibility: hidden
+                opacity: 0
+                &+span
+                    display: block
+                    padding: 0.3472222222222222vw
+                    font-size: 0.9722222222222222vw
+                    line-height: 1.5277777777777777vw
+                    border-top: 0.06944444444444445vw solid #C1EAEC
+                    margin-top: -0.06944444444444445vw
+                    transition: all 0.3s
+                    cursor: pointer
+                    &:hover
+                        background-color: #C1EAEC
+                &:checked + span
+        &__color
+            padding: 1.4583333333333333vw 1.3194444444444444vw
+            &-name
+                margin-bottom: 1.3194444444444444vw
+                color: #AEAEAE
+                font-size: 0.8333333333333334vw
+                font-weight: 400
+                line-height: normal
+                text-transform: uppercase
+            &-wrap
+                display: flex
+                align-items: center
+                grid-gap: 0.9722222222222222vw
+                flex-wrap: wrap
+            &-el
+                position: relative
+                width: 1.8055555555555554vw
+                height: 1.8055555555555554vw
+                border-radius: 50%
+                cursor: pointer
+                input
+                    position: absolute
+                    top: 0
+                    left: 0
+                    width: 0
+                    height: 0
+                    overflow: hidden
+                    visibility: hidden
+                    opacity: 0
+    &__more
+        color: #FFF
+        font-size: 0.9722222222222222vw
+        font-weight: 400
+        line-height: 1.5277777777777777vw
+        background: #E84A43
+        border: 0
+        transition: all 0.3s
+        margin-top: 3.8194444444444446vw
+        margin-right: 0
+        margin-left: auto
+        display: block
+        cursor: pointer
+        padding: 0.9027777777777777vw 5.138888888888888vw
+        &:hover
+            background-color: #C1EAEC
+            color: #000
+.card
+    &__bot
+        margin-bottom: 2.2222222222222223vw
+    &__subtitle
+        margin: 3.4722222222222223vw 0
+        color: #000
+        font-size: 1.6666666666666667vw
+        font-weight: 600
+        line-height: 2.2222222222222223vw
+        text-transform: uppercase
+@media(min-width: 601px)
+    .catalog
+        &-filters__block:hover
+            svg
+                transform: rotate(180deg)
+            .catalog-filters__drop
+                display: block
+@media(max-width: 1400px)
+    .card
+        &__bot
+            margin-bottom: 2.857142857142857vw
+        &__subtitle
+            margin: 4.464285714285714vw 0
+            font-size: 2.142857142857143vw
+            line-height: 2.857142857142857vw
+    .catalog
+        &__top
+            grid-gap: 1.3392857142857142vw
+            margin-bottom: 2.410714285714286vw
+            p
+                font-size: 1.25vw
+                line-height: 1.9642857142857142vw
+        &-filters
+            margin-bottom: 4.285714285714286vw
+            padding: 0 2.6785714285714284vw
+            grid-gap: 4.464285714285714vw
+            &__name
+                font-size: 1.0714285714285714vw
+                grid-gap: 0.5357142857142857vw
+                padding: 1.1607142857142858vw 0
+                svg
+                    width: 0.5357142857142857vw
+                    height: 0.35714285714285715vw
+            &__drop
+                top: calc(100% - 0.08928571428571429vw)
+                width: 24.46428571428571vw
+                border: 0.08928571428571429vw solid #C1EAEC
+            &__el
+                input
+                    &+span
+                        padding: 0.4464285714285714vw
+                        font-size: 1.25vw
+                        line-height: 1.9642857142857142vw
+                        border-top: 0.08928571428571429vw solid #C1EAEC
+                        margin-top: -0.08928571428571429vw
+            &__color
+                padding: 1.875vw 1.6964285714285714vw
+                &-name
+                    margin-bottom: 1.6964285714285714vw
+                    font-size: 1.0714285714285714vw
+                &-wrap
+                    grid-gap: 1.25vw
+                &-el
+                    width: 2.3214285714285716vw
+                    height: 2.3214285714285716vw
+        &__more
+            font-size: 1.25vw
+            line-height: 1.9642857142857142vw
+            margin-top: 4.910714285714286vw
+            padding: 1.1607142857142858vw 6.607142857142858vw
+@media(max-width: 1100px)
+    .card
+        &__bot
+            margin-bottom: 4.166666666666666vw
+        &__subtitle
+            margin: 6.510416666666667vw 0
+            font-size: 3.125vw
+            line-height: 4.166666666666666vw
+    .catalog
+        &__top
+            grid-gap: 1.953125vw
+            margin-bottom: 3.515625vw
+            p
+                font-size: 1.8229166666666667vw
+                line-height: 2.864583333333333vw
+        &-filters
+            margin-bottom: 6.25vw
+            padding: 0 3.90625vw
+            grid-gap: 6.510416666666667vw
+            &__name
+                font-size: 1.5625vw
+                grid-gap: 0.78125vw
+                padding: 1.6927083333333333vw 0
+                svg
+                    width: 0.78125vw
+                    height: 0.5208333333333333vw
+            &__drop
+                top: calc(100% - 0.13020833333333331vw)
+                width: 35.67708333333333vw
+                border: 0.13020833333333331vw solid #C1EAEC
+            &__el
+                input
+                    &+span
+                        padding: 0.6510416666666667vw
+                        font-size: 1.8229166666666667vw
+                        line-height: 2.864583333333333vw
+                        border-top: 0.13020833333333331vw solid #C1EAEC
+                        margin-top: -0.13020833333333331vw
+            &__color
+                padding: 2.734375vw 2.473958333333333vw
+                &-name
+                    margin-bottom: 2.473958333333333vw
+                    font-size: 1.5625vw
+                &-wrap
+                    grid-gap: 1.8229166666666667vw
+                &-el
+                    width: 3.3854166666666665vw
+                    height: 3.3854166666666665vw
+        &__more
+            font-size: 1.8229166666666667vw
+            line-height: 2.864583333333333vw
+            margin-top: 7.161458333333333vw
+            padding: 1.6927083333333333vw 9.635416666666668vw
+@media(max-width: 600px)
+    .card
+        &__bot
+            margin-bottom: 8.533333333333333vw
+        &__subtitle
+            margin: 13.333333333333334vw 0
+            font-size: 6.4vw
+            line-height: 8.533333333333333vw
+        &__wrap
+            .gal
+                &__right
+                    display: flex
+                    flex-direction: column
+                &__name
+                    order: -2
+                &__descr
+                    order: -1
+                    margin-bottom: 6.4vw
+        &__bot
+            margin-bottom: 89.33333333333333vw
+        &__subtitle
+            margin-top: 17.333333333333336vw
+            margin-bottom: 8.533333333333333vw
+            position: relative
+            &::before
+                content: ""
+                display: block
+                width: 100%
+                height: 0.26666666666666666vw
+                background: #C1EAEC
+                position: absolute
+                top: -8.533333333333333vw
+                left: 0
+    .catalog
+        &__top
+            grid-gap: 4.0vw
+            margin-bottom: 7.199999999999999vw
+            p
+                font-size: 3.733333333333334vw
+                line-height: 5.866666666666666vw
+        &-filters
+            margin-bottom: 12.8vw
+            padding: 0 8.0vw
+            grid-gap: 13.333333333333334vw
+            &__name
+                font-size: 3.2vw
+                grid-gap: 1.6vw
+                padding: 3.4666666666666663vw 0
+                svg
+                    width: 1.6vw
+                    height: 1.0666666666666667vw
+            &__drop
+                top: calc(100% - 0.26666666666666666vw)
+                width: 73.06666666666666vw
+                border: 0.26666666666666666vw solid #C1EAEC
+            &__el
+                input
+                    &+span
+                        padding: 1.3333333333333335vw
+                        font-size: 3.733333333333334vw
+                        line-height: 5.866666666666666vw
+                        border-top: 0.26666666666666666vw solid #C1EAEC
+                        margin-top: -0.26666666666666666vw
+            &__color
+                padding: 5.6000000000000005vw 5.066666666666666vw
+                &-name
+                    margin-bottom: 5.066666666666666vw
+                    font-size: 3.2vw
+                &-wrap
+                    grid-gap: 3.733333333333334vw
+                &-el
+                    width: 6.933333333333333vw
+                    height: 6.933333333333333vw
+        &__more
+            font-size: 3.733333333333334vw
+            line-height: 5.866666666666666vw
+            margin-top: 14.666666666666666vw
+            padding: 3.4666666666666663vw 19.733333333333334vw
+    .catalog
+        &__top
+            grid-template-columns: repeat(1, 1fr)
+        &__more
+            margin-top: 0
+        &-filters
+            padding: 0 4.8vw
+            grid-gap: 4.8vw
+            position: relative
+            &__block
+                position: static
+            &__name.clicked
+                svg
+                    transform: rotate(180deg)
+                &+ .catalog-filters__drop
+                    display: block
+                    width: calc(100vw - 10.666666666666668vw)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

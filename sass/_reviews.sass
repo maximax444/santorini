@@ -1,0 +1,355 @@
+.reviews
+    &__top
+        display: flex
+        justify-content: space-between
+        margin-bottom: 3.125vw
+    &__subtitle
+        font-size: 1.1111111111111112vw
+        font-weight: 600
+        line-height: 1.5277777777777777vw
+        text-transform: uppercase
+        max-width: 32.63888888888889vw
+    &__descr
+        font-size: 0.9722222222222222vw
+        font-weight: 300
+        line-height: 1.5277777777777777vw
+        text-align: right
+        max-width: 20.833333333333336vw
+        a
+            color: #000
+    &__tabs
+        display: flex
+        align-items: flex-end
+        margin-bottom: 2.569444444444444vw
+    &__tab
+        background: #C1EAEC
+        padding: 0.9027777777777777vw 2.430555555555556vw
+        font-size: 0.8333333333333334vw
+        font-weight: 400
+        line-height: 1.5277777777777777vw
+        text-transform: uppercase
+        transition: all 0.3s
+        cursor: pointer
+        &:hover, &.active
+            background: #E84A43
+            padding: 1.3194444444444444vw 2.430555555555556vw
+            color: #fff
+    &__cont
+        &-block
+            display: none
+            &.active
+                display: block
+    &__video
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-gap: 1.0416666666666665vw
+        iframe
+            max-width: 100%
+            height: 17.36111111111111vw
+            &:nth-child(6n + 1)
+                grid-column: span 2
+                grid-row: span 2
+                height: 35.76388888888889vw
+            &:nth-child(6n - 1)
+                grid-column: span 2
+                grid-row: span 2
+                height: 35.76388888888889vw
+    &__insta
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-gap: 1.0416666666666665vw
+    &-fb
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-gap: 1.0416666666666665vw
+        &__stars
+            display: flex
+            align-items: center
+            grid-gap: 0.3472222222222222vw
+            margin-bottom: 1.5277777777777777vw
+        &__text
+            margin: 0
+            font-size: 0.9722222222222222vw
+            font-weight: 300
+            line-height: 1.5277777777777777vw
+        &__bot
+            display: flex
+            flex-direction: row
+            align-items: flex-end
+            height: auto
+            grid-gap: 2.083333333333333vw
+        &__pers
+            font-size: 0.9722222222222222vw
+            font-weight: 300
+            line-height: 1.5277777777777777vw
+            span
+                display: block
+                margin-bottom: 0.8333333333333334vw
+                font-size: 1.1111111111111112vw
+                font-weight: 600
+                line-height: 1.5277777777777777vw
+        &__block
+            height: 17.36111111111111vw
+            grid-column: span 2
+            background: #C1EAEC
+            padding: 2.2222222222222223vw 1.875vw
+            padding-bottom: 1.3888888888888888vw
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            &:nth-child(6n + 1)
+                grid-column: span 1
+                grid-row: span 2
+                height: 35.76388888888889vw
+                .reviews-fb__bot
+                    flex-direction: column
+                    align-items: flex-start
+            &:nth-child(6n - 1)
+                grid-column: span 1
+                grid-row: span 2
+                height: 35.76388888888889vw
+                .reviews-fb__bot
+                    flex-direction: column
+                    align-items: flex-start
+@media(max-width: 1400px)
+    .reviews
+        &__top
+            margin-bottom: 4.017857142857143vw
+        &__subtitle
+            font-size: 1.4285714285714286vw
+            line-height: 1.9642857142857142vw
+            max-width: 41.964285714285715vw
+        &__descr
+            font-size: 1.25vw
+            line-height: 1.9642857142857142vw
+            max-width: 26.785714285714285vw
+        &__tabs
+            margin-bottom: 3.303571428571429vw
+        &__tab
+            padding: 1.1607142857142858vw 3.125vw
+            font-size: 1.0714285714285714vw
+            line-height: 1.9642857142857142vw
+            &:hover, &.active
+                padding: 1.6964285714285714vw 3.125vw
+        &__video
+            grid-gap: 1.3392857142857142vw
+            iframe
+                height: 22.321428571428573vw
+                &:nth-child(6n + 1)
+                    grid-column: span 2
+                    grid-row: span 2
+                    height: 45.982142857142854vw
+                &:nth-child(6n - 1)
+                    grid-column: span 2
+                    grid-row: span 2
+                    height: 45.982142857142854vw
+        &__insta
+            grid-template-columns: repeat(3, 1fr)
+            grid-gap: 1.3392857142857142vw
+        &-fb
+            grid-template-columns: repeat(3, 1fr)
+            grid-gap: 1.3392857142857142vw
+            &__stars
+                grid-gap: 0.4464285714285714vw
+                margin-bottom: 1.9642857142857142vw
+            &__text
+                font-size: 1.25vw
+                line-height: 1.9642857142857142vw
+            &__bot
+                grid-gap: 2.6785714285714284vw
+            &__pers
+                font-size: 1.25vw
+                line-height: 1.9642857142857142vw
+                span
+                    margin-bottom: 1.0714285714285714vw
+                    font-size: 1.4285714285714286vw
+                    line-height: 1.9642857142857142vw
+            &__block
+                height: 22.321428571428573vw
+                padding: 2.857142857142857vw 2.410714285714286vw
+                padding-bottom: 1.7857142857142856vw
+                &:nth-child(6n + 1)
+                    grid-column: span 1
+                    grid-row: span 2
+                    height: 45.982142857142854vw
+                &:nth-child(6n - 1)
+                    grid-column: span 1
+                    grid-row: span 2
+                    height: 45.982142857142854vw
+@media(max-width: 1100px)
+    .reviews
+        &__top
+            margin-bottom: 5.859375vw
+        &__subtitle
+            font-size: 2.083333333333333vw
+            line-height: 2.864583333333333vw
+            max-width: 61.197916666666664vw
+        &__descr
+            font-size: 1.8229166666666667vw
+            line-height: 2.864583333333333vw
+            max-width: 39.0625vw
+        &__tabs
+            margin-bottom: 4.817708333333334vw
+        &__tab
+            padding: 1.6927083333333333vw 4.557291666666666vw
+            font-size: 1.5625vw
+            line-height: 2.864583333333333vw
+            &:hover, &.active
+                padding: 2.473958333333333vw 4.557291666666666vw
+        &__video
+            grid-gap: 1.953125vw
+            grid-template-columns: repeat(1, 1fr)
+            iframe
+                height: 32.55208333333333vw
+                &:nth-child(6n + 1)
+                    grid-column: span 1
+                    grid-row: span 1
+                    height: 32.55208333333333vw
+                &:nth-child(6n - 1)
+                    grid-column: span 1
+                    grid-row: span 1
+                    height: 32.55208333333333vw
+        &__insta
+            grid-template-columns: repeat(1, 1fr)
+            grid-gap: 1.953125vw
+        &-fb
+            grid-template-columns: repeat(1, 1fr)
+            grid-gap: 1.953125vw
+            &__stars
+                grid-gap: 0.6510416666666667vw
+                margin-bottom: 2.864583333333333vw
+            &__text
+                font-size: 1.8229166666666667vw
+                line-height: 2.864583333333333vw
+            &__bot
+                grid-gap: 0.0vw
+                flex-direction: column
+                align-items: flex-start
+            &__pers
+                font-size: 1.8229166666666667vw
+                line-height: 2.864583333333333vw
+                span
+                    margin-bottom: 1.5625vw
+                    font-size: 2.083333333333333vw
+                    line-height: 2.864583333333333vw
+            &__block
+                height: auto
+                padding: 4.166666666666666vw 3.515625vw
+                padding-bottom: 2.604166666666667vw
+                grid-gap: 3.2552083333333335vw
+                grid-column: span 1
+                &:nth-child(6n + 1)
+                    grid-column: span 1
+                    grid-row: span 1
+                    height: auto
+                &:nth-child(6n - 1)
+                    grid-column: span 1
+                    grid-row: span 1
+                    height: auto
+        .home-rev
+            &__small
+                display: block
+            &__left
+                display: flex
+                align-items: center
+                width: 100%
+            &__img_small
+            &__info_small
+                width: 50%
+            &__small .home-rev__rev p
+                max-width: 100%
+@media(max-width: 600px)
+    .reviews
+        &__top
+            margin-bottom: 12.0vw
+            flex-direction: column
+            grid-gap: 3.2vw
+        &__subtitle
+            font-size: 4.266666666666667vw
+            line-height: 5.866666666666666vw
+            max-width: 125.33333333333334vw
+        &__descr
+            font-size: 3.733333333333334vw
+            line-height: 5.866666666666666vw
+            max-width: 80.0vw
+            text-align: left
+        &__tabs
+            margin-bottom: 9.866666666666667vw
+        &__tab
+            padding: 2.1333333333333333vw 6.666666666666667vw
+            font-size: 3.2vw
+            line-height: 4.266666666666667vw
+            text-align: center
+            width: 33%
+            &:hover, &.active
+                padding: 3.733333333333334vw 6.666666666666667vw
+        &__video
+            grid-gap: 4.0vw
+            grid-template-columns: repeat(1, 1fr)
+            iframe
+                height: 49.333333333333336vw
+                &:nth-child(6n + 1)
+                    grid-column: span 1
+                    grid-row: span 1
+                    height: 49.333333333333336vw
+                &:nth-child(6n - 1)
+                    grid-column: span 1
+                    grid-row: span 1
+                    height: 49.333333333333336vw
+        &__insta
+            grid-template-columns: repeat(1, 1fr)
+            grid-gap: 4.0vw
+        &-fb
+            grid-template-columns: repeat(1, 1fr)
+            grid-gap: 4.0vw
+            &__stars
+                grid-gap: 1.3333333333333335vw
+                margin-bottom: 5.866666666666666vw
+            &__text
+                font-size: 3.733333333333334vw
+                line-height: 5.866666666666666vw
+            &__bot
+                grid-gap: 0.0vw
+                flex-direction: column
+                align-items: flex-start
+            &__pers
+                font-size: 3.733333333333334vw
+                line-height: 5.866666666666666vw
+                span
+                    margin-bottom: 3.2vw
+                    font-size: 4.266666666666667vw
+                    line-height: 5.866666666666666vw
+            &__block
+                height: auto
+                padding: 8.533333333333333vw 7.199999999999999vw
+                padding-bottom: 5.333333333333334vw
+                grid-gap: 6.666666666666667vw
+                grid-column: span 1
+                &:nth-child(6n + 1)
+                    grid-column: span 1
+                    grid-row: span 1
+                    height: auto
+                &:nth-child(6n - 1)
+                    grid-column: span 1
+                    grid-row: span 1
+                    height: auto
+        .home-rev
+            &__small
+                display: block
+            &__left
+                display: flex
+                align-items: center
+                width: 100%
+            &__img_small
+            &__info_small
+                width: 50%
+            &__small .home-rev__rev p
+                max-width: 100%
+            &__small .home-rev__rev
+                width: 100%
+            &__small .home-rev__rev a
+                font-size: 3.2vw
+
+
+
+
